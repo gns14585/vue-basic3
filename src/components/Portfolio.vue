@@ -6,15 +6,19 @@
         <img :src="`${item.imgUrl}`" alt="1" />
         <h3>{{ item.title }}</h3>
         <p>{{ item.desc }}</p>
+        <router-link class="btn btn-primary" :to="`/detail/${item.id}`"
+          >상세보기</router-link
+        >
       </li>
     </ul>
   </section>
 </template>
 
 <script setup>
-import data from "../assets/portfolio.js";
-
-console.log(data);
+const props = defineProps({
+  data: Array,
+});
+console.log(props.data);
 </script>
 
 <style lang="scss">
