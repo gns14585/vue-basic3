@@ -6,6 +6,7 @@
         <img :src="`${item.imgUrl}`" alt="1" />
         <h3>{{ item.title }}</h3>
         <p>{{ item.desc }}</p>
+        <small class="mb-3 text-secondary">{{ item.skills }}</small>
         <router-link class="btn btn-primary" :to="`/detail/${item.id}`"
           >상세보기</router-link
         >
@@ -40,6 +41,7 @@ console.log(props.data);
         aspect-ratio: 16 / 9;
         object-fit: cover;
         object-position: top;
+        margin-bottom: 1em;
       }
       h4 {
         margin-top: 1rem;
